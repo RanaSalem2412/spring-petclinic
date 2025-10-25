@@ -21,8 +21,8 @@ jobs:
       - name: Give Gradle permissions
         run: chmod +x gradlew
 
-      - name: Run Gradle tests
-        run: ./gradlew test
+      - name: Build project with Gradle
+        run: ./gradlew clean build
         
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -46,7 +46,6 @@ jobs:
         
         
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      
 
         
