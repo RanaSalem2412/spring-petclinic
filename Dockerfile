@@ -1,5 +1,8 @@
-FROM openjdk:25-jdk-slim
+# Dockerfile
+FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY build/libs/*.jar app.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+COPY . .
+RUN apt-get update && apt-get install -y maven git curl unzip && \
+    mvn clean package -DskipTests
+CMD ["java", "-jar", "target/spring-petclinic-*.jar"]
+
