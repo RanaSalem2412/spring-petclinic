@@ -8,6 +8,22 @@
     <version>3.3.5</version>
     <relativePath></relativePath>
   </parent>
+  <repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo1.maven.org/maven2/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+    </repository>
+</repositories>
+
+<pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>https://repo1.maven.org/maven2/</url>
+    </pluginRepository>
+</pluginRepositories>
 
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
