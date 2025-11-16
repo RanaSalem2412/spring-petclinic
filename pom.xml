@@ -5,14 +5,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-<parent>  
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.4</version>
-    <relativePath/> <!-- مهم: يمنع Maven من البحث محلياً -->
-</parent>
-
-
+    <parent>  
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.4</version>
+        <relativePath/> <!-- يمنع Maven من البحث محلياً -->
+    </parent>
 
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic</artifactId>
@@ -20,7 +18,7 @@
     <name>petclinic</name>
 
     <properties>
-        <java.version>25</java.version>
+        <java.version>17</java.version>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -38,16 +36,13 @@
         <spring-format.version>0.0.47</spring-format.version>
     </properties>
 
-    <!-- إضافة مستودعات Maven -->
+    <!-- إضافة مستودع Maven Central -->
     <repositories>
-        <repositories>
-    <repository>
-        <id>central</id>
-        <name>Maven Central Repository</name>
-        <url>https://repo.maven.apache.org/maven2</url>
-    </repository>
-</repositories>
-
+        <repository>
+            <id>central</id>
+            <name>Maven Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -72,15 +67,15 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
-        <!-- باقي dependencies كما في الأصل -->
     </dependencies>
 
     <build>
         <plugins>
-            <!-- احتفظ بكل الإعدادات السابقة -->
+            <!-- احتفظي بكل الإعدادات السابقة -->
         </plugins>
     </build>
 
 </project>
+
 
 
