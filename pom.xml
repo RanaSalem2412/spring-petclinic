@@ -253,38 +253,6 @@
           <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>default-compile</id>
-            <phase>compile</phase>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <configuration>
-              <compilerArgs>
-                <arg>-XDcompilePolicy=simple</arg>
-                <arg>--should-stop=ifError=FLOW</arg>
-                <arg>-Xplugin:ErrorProne -XDcompilePolicy=simple -XepDisableAllChecks -Xep:NullAway:ERROR -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:CustomContractAnnotations=org.springframework.lang.Contract -XepOpt:NullAway:JSpecifyMode=true</arg>
-              </compilerArgs>
-              <annotationProcessorPaths>
-                <path>
-                  <groupId>com.google.errorprone</groupId>
-                  <artifactId>error_prone_core</artifactId>
-                  <version>${error-prone.version}</version>
-                </path>
-                <path>
-                  <groupId>com.uber.nullaway</groupId>
-                  <artifactId>nullaway</artifactId>
-                  <version>${nullaway.version}</version>
-                </path>
-              </annotationProcessorPaths>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
       <!-- Spring Boot Actuator displays sbom-related information if a CycloneDX SBOM file is
       present at the classpath -->
       <plugin>
@@ -422,6 +390,3 @@
     </profile>
   </profiles>
 </project>
-
-
-
