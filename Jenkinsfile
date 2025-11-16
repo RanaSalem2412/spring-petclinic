@@ -1,3 +1,3 @@
 @Library('jenkins-pipelines') _
 
-petclinicPipeline()
+petclinicPipeline(globals)
