@@ -40,16 +40,14 @@
 
     <!-- إضافة مستودعات Maven -->
     <repositories>
-        <!-- Maven Central -->
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-        <!-- Nexus داخلي -->
-        <repository>
-            <id>nexus-mirror</id>
-            <url>http://44.203.150.173:8081/repository/maven-releases-project/</url>
-        </repository>
+        <repositories>
+    <repository>
+        <id>central</id>
+        <name>Maven Central Repository</name>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+</repositories>
+
     </repositories>
 
     <dependencies>
