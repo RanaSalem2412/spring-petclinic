@@ -1,6 +1,6 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY . .
-RUN apt-get update && apt-get install -y maven git curl unzip && \
+RUN apk update && apk add --no-cache maven git curl unzip bash && \
     mvn clean package -Dmaven.test.skip=true
-CMD ["java", "-jar", "target/spring-petclinic-*.jar"]
+CMD ["sh", "-c", "java -jar target/spring-petclinic-*.jar"]
